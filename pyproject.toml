@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cspforge"
+version = "1.0.0"
+description = "Zero-dependency, offline-first Content Security Policy parser, auditor & hardening engine (library + CLI)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "CSPForge contributors" }]
+keywords = ["csp", "content-security-policy", "security", "audit", "sarif", "offline", "zero-dependency"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.optional-dependencies]
+test = []
+
+[project.scripts]
+cspforge = "cspforge.cli:main"
+
+[tool.setuptools]
+packages = ["cspforge"]
